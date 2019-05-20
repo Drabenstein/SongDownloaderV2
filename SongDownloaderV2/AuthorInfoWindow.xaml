@@ -1,0 +1,74 @@
+﻿<Metro:MetroWindow x:Class="SongDownloaderV2.AuthorInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Metro="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:SongDownloaderV2"
+        mc:Ignorable="d"
+        GlowBrush="Black"
+        BorderThickness="0"
+        Title="Informacje o oprogramowaniu" Height="233.875" Width="452.436" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" IsCloseButtonEnabled="False" IsMaxRestoreButtonEnabled="False" IsMinButtonEnabled="False" ShowCloseButton="False" ShowMaxRestoreButton="False" ShowMinButton="False" ShowSystemMenuOnRightClick="False">
+
+    <Metro:MetroWindow.RightWindowCommands>
+        <Metro:WindowCommands>
+            <Button Click="Button_Close_Click" ToolTip="Zamknij">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="24" Height="24" Fill="LawnGreen">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Visual="{StaticResource appbar_close}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                </StackPanel>
+            </Button>
+        </Metro:WindowCommands>
+    </Metro:MetroWindow.RightWindowCommands>
+    
+    <Grid>
+        <GroupBox>
+            <GroupBox.Header>
+                <TextBlock TextAlignment="Center" FontFamily="Yu Gothic UI Semibold">
+                    <Run Foreground="Azure">Informacje o oprogramowaniu</Run>
+                </TextBlock>
+            </GroupBox.Header>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+
+                <GroupBox Grid.Column="0">
+                    <GroupBox.Header>
+                        <TextBlock TextAlignment="Center" FontFamily="Yu Gothic UI Semibold">
+                    <Run Foreground="Azure">Twórca</Run>
+                        </TextBlock>
+                    </GroupBox.Header>
+                    <TextBlock TextAlignment="Center" FontFamily="Yu Gothic UI Semibold" TextWrapping="WrapWithOverflow" VerticalAlignment="Center">
+                        <TextBlock.Inlines>
+                            <Run Foreground="CornflowerBlue">Marcin "MarcinEU" Drabek</Run>
+                            <LineBreak />
+                            <Run Foreground="CornflowerBlue">superhiperfajnydev@gmail.com</Run>
+                            <LineBreak />
+                            <Run Foreground="CornflowerBlue">Copyright 2017</Run>
+                        </TextBlock.Inlines>                       
+                    </TextBlock>
+                </GroupBox>
+
+                <GroupBox Grid.Column="1">
+                    <GroupBox.Header>
+                        <TextBlock TextAlignment="Center" FontFamily="Yu Gothic UI Semibold">
+                    <Run Foreground="Azure">Licencja</Run>
+                        </TextBlock>
+                    </GroupBox.Header>
+
+                    <TextBlock Foreground="CornflowerBlue" TextAlignment="Center" FontFamily="Yu Gothic UI Semibold" TextWrapping="WrapWithOverflow" VerticalAlignment="Center">
+                        <TextBlock.Inlines>
+                            Oprogramowanie jest rozpowszechniane na licencji
+                            <Hyperlink NavigateUri="https://pl.wikipedia.org/wiki/Beerware">Beerware</Hyperlink>
+                        </TextBlock.Inlines>
+                    </TextBlock>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Metro:MetroWindow>
